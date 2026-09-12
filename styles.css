@@ -1,0 +1,397 @@
+/* =========================================================
+   Tokens
+   ========================================================= */
+:root {
+  --ink: #1f2a3c;
+  --ink-soft: #2b3a52;
+  --parchment: #f3eee3;
+  --parchment-deep: #ece3d2;
+  --brass: #b98a4e;
+  --brass-dark: #93692f;
+  --wine: #6e2a33;
+  --text: #2b2a28;
+  --text-muted: #5a564d;
+  --white: #fffdf9;
+
+  --font-display: "Lora", Georgia, serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --container-width: 72rem;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 3.5rem;
+  --space-xl: 5.5rem;
+
+  --radius: 4px;
+}
+
+/* =========================================================
+   Reset & base
+   ========================================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--parchment);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--brass-dark);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  line-height: 1.2;
+  margin: 0 0 var(--space-sm);
+}
+
+h1 { font-size: clamp(2rem, 4.5vw + 1rem, 3.25rem); font-weight: 600; }
+h2 { font-size: clamp(1.5rem, 2vw + 1rem, 2.1rem); font-weight: 600; }
+h3 { font-size: 1.2rem; font-weight: 600; }
+
+p {
+  max-width: 62ch;
+  color: var(--text);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+
+/* =========================================================
+   Header
+   ========================================================= */
+.site-header {
+  background-color: var(--parchment);
+  border-bottom: 1px solid var(--parchment-deep);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding-block: var(--space-sm);
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--ink);
+  margin: 0;
+}
+
+.logo-divider {
+  color: var(--brass-dark);
+  font-style: normal;
+  margin-inline: 0.15rem;
+}
+
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav a {
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover {
+  border-bottom-color: var(--brass);
+}
+
+/* =========================================================
+   Hero — staff-line motif
+   ========================================================= */
+.hero {
+  background-color: var(--ink);
+  color: var(--parchment);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 38px,
+    rgba(243, 238, 227, 0.16) 38px,
+    rgba(243, 238, 227, 0.16) 40px
+  );
+  background-position: 0 60px;
+  background-repeat: repeat-x;
+  background-size: 100% 200px;
+}
+
+.hero-inner {
+  display: grid;
+  gap: var(--space-lg);
+  padding-block: var(--space-xl);
+  align-items: center;
+}
+
+.hero-text h1 {
+  color: var(--white);
+}
+
+.hero-lead {
+  color: #d9d3c4;
+  font-size: 1.05rem;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: var(--space-sm);
+  padding: 0.85rem 1.75rem;
+  background-color: var(--brass);
+  color: var(--ink);
+  font-weight: 600;
+  border-radius: var(--radius);
+}
+
+.cta-button:hover {
+  background-color: var(--brass-dark);
+  color: var(--white);
+}
+
+.cta-button--outline {
+  background-color: transparent;
+  border: 2px solid var(--brass);
+  color: var(--ink);
+}
+
+.cta-button--outline:hover {
+  background-color: var(--brass);
+  color: var(--ink);
+}
+
+.hero-staff {
+  display: none;
+}
+
+.clef-path,
+.clef-dot {
+  stroke: var(--brass);
+  fill: none;
+}
+
+.clef-dot {
+  fill: var(--brass);
+  stroke: none;
+}
+
+/* =========================================================
+   About
+   ========================================================= */
+.about-inner {
+  padding-block: var(--space-xl);
+}
+
+.about-inner p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+}
+
+/* =========================================================
+   Services
+   ========================================================= */
+.services {
+  background-color: var(--parchment-deep);
+}
+
+.services .container {
+  padding-block: var(--space-xl);
+}
+
+.services-grid {
+  display: grid;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.service-card {
+  background-color: var(--white);
+  border-top: 3px solid var(--brass);
+  padding: var(--space-md);
+}
+
+.service-card p {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+}
+
+/* =========================================================
+   Gallery
+   ========================================================= */
+.gallery .container {
+  padding-block: var(--space-xl);
+}
+
+.gallery-grid {
+  display: grid;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.gallery-grid figure {
+  margin: 0;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.gallery-grid figcaption {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* =========================================================
+   Contact
+   ========================================================= */
+.contact {
+  background-color: var(--ink);
+  color: var(--parchment);
+}
+
+.contact-inner {
+  padding-block: var(--space-xl);
+  text-align: left;
+}
+
+.contact-inner h2 {
+  color: var(--white);
+}
+
+.contact-inner p {
+  color: #d9d3c4;
+}
+
+/* =========================================================
+   Footer
+   ========================================================= */
+.site-footer {
+  background-color: var(--ink-soft);
+  color: #cfc9ba;
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding-block: var(--space-md);
+  font-size: 0.9rem;
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  gap: var(--space-md);
+  margin: 0;
+  padding: 0;
+}
+
+.social-list a:hover {
+  color: var(--brass);
+}
+
+.copyright {
+  width: 100%;
+  color: #a29c8c;
+  font-size: 0.8rem;
+}
+
+/* =========================================================
+   Responsive breakpoints
+   ========================================================= */
+
+/* Tablet and up */
+@media (min-width: 640px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .copyright {
+    width: auto;
+    margin-left: auto;
+  }
+}
+
+/* Desktop and up */
+@media (min-width: 960px) {
+  .hero-inner {
+    grid-template-columns: 3fr 1fr;
+  }
+
+  .hero-staff {
+    display: block;
+    justify-self: center;
+  }
+
+  .clef {
+    width: 90px;
+    height: auto;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Reduced motion respected (no non-essential motion used, kept for completeness) */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+  }
+}
