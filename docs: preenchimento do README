@@ -1,0 +1,62 @@
+# Isabel — Música & Gestão | Landing Page
+
+Landing page responsiva desenvolvida como desafio de curso. O tema é um
+portfólio pessoal que une minha experiência com teoria musical e direção
+artística à formação que estou construindo em administração e tecnologia.
+
+## 🔗 Links
+
+- **Site publicado (GitHub Pages):** _[cole aqui o link depois de publicar]_
+- **Repositório:** _[cole aqui o link do repositório]_
+
+## 🛠️ Tecnologias utilizadas
+
+- HTML5 semântico (`header`, `nav`, `main`, `section`, `article`, `figure`, `footer`)
+- CSS3 externo (arquivo único em `css/styles.css`, sem `style` inline nem `<style>`)
+- Google Fonts (Lora e Inter) via `<link>`
+- Git e GitHub Pages para versionamento e publicação
+- Sem JavaScript, conforme regras do desafio
+
+## 📐 Estrutura da página
+
+- **Header:** logo/nome e menu de navegação com âncoras para cada seção
+- **Hero:** título, descrição curta e botão de chamada para ação, com um
+  motivo visual de "pauta musical" feito em CSS puro (sem imagens)
+- **Sobre:** apresentação da minha trajetória entre música e administração
+- **Serviços:** 3 cards — Aulas de Teoria Musical, Direção Artística de
+  Projetos e Organização Administrativa
+- **Galeria:** 4 imagens ilustrativas do tema (piano, partitura, mesa de
+  trabalho, palco) — atualmente com imagens de placeholder, a serem
+  substituídas por fotos reais antes da entrega final
+- **Contato e Footer:** e-mail de contato e links para redes sociais
+
+## ♿ Acessibilidade e responsividade
+
+- Todas as imagens têm `alt` descritivo
+- Hierarquia de títulos respeitada (`h1` no hero, `h2` por seção, `h3` nos
+  cards)
+- Foco visível em links e botões (`:focus-visible`)
+- Layout mobile-first com breakpoints em 640px (tablet) e 960px (desktop),
+  sem rolagem horizontal em nenhum tamanho de tela
+
+## 🤖 Uso de Inteligência Artificial
+
+Utilizei o Claude como apoio durante o desenvolvimento. Principais usos:
+
+- **Estruturação do conteúdo:** pedi ajuda para organizar as seções
+  obrigatórias do desafio (header, hero, sobre, serviços, galeria, contato)
+  dentro de uma estrutura HTML semântica coerente.
+- **Definição da identidade visual:** discuti com a IA uma paleta e um
+  conceito de layout que fizessem sentido para o tema (música +
+  administração), evitando um visual genérico — daí a ideia da "pauta
+  musical" em CSS no hero e o uso de cores inspiradas em partitura/papel.
+- **Redação e revisão de textos:** pedi sugestões de frases para o hero, a
+  seção "Sobre" e os cards de serviço, e depois ajustei o tom para soar
+  como a minha própria voz.
+- **Revisão de código:** pedi para verificar se a estrutura semântica, a
+  hierarquia de títulos e a responsividade (CSS Grid + media queries)
+  estavam corretas e sem uso proibido de JavaScript ou CSS inline.
+
+Todo o código foi revisado por mim antes da entrega, e sei explicar cada
+escolha de estrutura, estilo e conteúdo feita na página.
+
